@@ -1,8 +1,7 @@
 # Machine-Learning---Performance-of-various-Classifiers
 
 Compare performance of classifiers on a chosen dataset. Below is the list of classifiers:
-  • Decision Trees
-  • Perceptron (usually specified as a neural net with 0 hidden layers)
+  • Decision Trees                                                                                                                           • Perceptron 
   • Neural Net
   • Deep Learning
   • SVM
