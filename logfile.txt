@@ -1,0 +1,396 @@
+Decision tree
+
+decisionTree = DecisionTreeClassifier(criterion='entropy',splitter='best',max_features='auto')
+
+Accuracy: 0.944363103953
+F1-score: [ 0.95720721  0.92050209]
+
+decisionTree = DecisionTreeClassifier(criterion='entropy',splitter='best',max_features=9)
+
+Accuracy: 0.94729136164
+F1-score: [ 0.95927602  0.9253112 ]
+
+decisionTree = DecisionTreeClassifier(criterion='entropy',splitter='random',max_features=9)
+
+Accuracy: 0.95168374817
+F1-score: [ 0.96304591  0.93023256]
+
+decisionTree = DecisionTreeClassifier(criterion='entropy',splitter='random',max_features='sqrt')
+Accuracy: 0.96046852123
+F1-score: [ 0.96969697  0.94315789]
+
+decisionTree = DecisionTreeClassifier(criterion='entropy',splitter='random',max_features='auto')
+Accuracy: 0.948755490483
+F1-score: [ 0.96098105  0.92537313]
+
+
+
+
+Neural network
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(4,2),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=50,learning_rate_init=0.001)
+
+Stochastic Optimizer: Maximum iterations (50) reached and the optimization hasn't converged yet.
+
+Accuracy: 0.91654465593
+F1-score: [ 0.93530079  0.88247423]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(4,2),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=100,learning_rate_init=0.001)
+
+Accuracy: 0.967789165447
+F1-score: [ 0.975       0.95473251]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(10,3),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=100,learning_rate_init=0.001)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97732426  0.95867769]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(10,3),activation='relu',alpha=0.005,learning_rate='adaptive',max_iter=100,learning_rate_init=0.001)
+
+Accuracy: 0.9121522694
+F1-score: [ 0.92840095  0.88636364]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(10,15),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=200,learning_rate_init=0.001)
+
+Accuracy: 0.972181551977
+F1-score: [ 0.97853107  0.96049896]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(5,6),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=200,learning_rate_init=0.001)
+
+Accuracy: 0.967789165447
+F1-score: [ 0.97511312  0.95435685]
+
+neuralNet= MLPClassifier(hidden_layer_sizes=(8,6),activation='tanh',alpha=0.005,learning_rate='adaptive',max_iter=200,learning_rate_init=0.001)
+
+Accuracy: 0.972181551977
+F1-score: [ 0.97848245  0.96066253]
+
+
+
+
+
+Perceptron
+
+perceptron = Perceptron(penalty = '100',alpha=0.001,max_iter=200,shuffle=False)
+
+Accuracy: 0.96046852123
+F1-score: [ 0.96996663  0.94218415]
+
+perceptron = Perceptron(penalty = 'l2',alpha=0.001,max_iter=200,shuffle=True)
+
+Accuracy: 0.941434846266
+F1-score: [ 0.95515695  0.91561181]
+
+perceptron = Perceptron(penalty = 'l1',alpha=0.001,max_iter=200,shuffle=True)
+
+Accuracy: 0.961932650073
+F1-score: [ 0.97045455  0.94650206]
+
+perceptron = Perceptron(penalty = 'l1',alpha=0.001,max_iter=200,shuffle=False)
+
+Accuracy: 0.959004392387
+F1-score: [ 0.96853933  0.94117647]
+
+
+
+
+
+
+SVM
+
+SVM = SVC(C=1.0, kernel='linear', max_iter=50)
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97278912  0.95041322]
+
+SVM = SVC(C=5.0, kernel='linear', max_iter=50)
+
+Accuracy: 0.666178623719
+F1-score: [ 0.7084399   0.60958904]
+
+SVM = SVC(C=1.0, kernel='poly', degree=5, max_iter=70)
+
+Accuracy: 0.93850658858
+F1-score: [ 0.95454545  0.90497738]
+
+SVM = SVC(C=1.0, kernel='rbf', max_iter=70)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97727273  0.95884774]
+
+SVM = SVC(C=1.0, kernel='sigmoid', max_iter=70)
+
+Accuracy: 0.957540263543
+F1-score: [ 0.96700796  0.94045175]
+
+
+
+
+
+K nearest neighbours
+
+kNN = KNeighborsClassifier(n_neighbors=12, algorithm='kd_tree')
+
+Accuracy: 0.967789165447
+F1-score: [ 0.9752809   0.95378151]
+
+kNN = KNeighborsClassifier(n_neighbors=6, algorithm='kd_tree')
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97309417  0.94936709]
+
+kNN = KNeighborsClassifier(n_neighbors=20, algorithm='kd_tree')
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97752809  0.95798319]
+
+kNN = KNeighborsClassifier(n_neighbors=20, algorithm='auto')
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97303371  0.94957983]
+
+
+
+
+
+
+
+Logistic regression
+
+logisticRegression = LogisticRegression(penalty='l2',max_iter=25,solver='liblinear',C=2)
+
+Accuracy: 0.967789165447
+F1-score: [ 0.9752809   0.95378151]
+
+logisticRegression = LogisticRegression(penalty='l2',max_iter=25,solver='liblinear',C=4)
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97303371  0.94957983]
+
+logisticRegression = LogisticRegression(penalty='l2',max_iter=100,solver='liblinear',C=2)
+
+Accuracy: 0.96925329429
+F1-score: [ 0.97637795  0.95597484]
+
+logisticRegression = LogisticRegression(penalty='l1',max_iter=100,solver='liblinear',C=2)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97747748  0.958159  ]
+
+logisticRegression = LogisticRegression(penalty='l1',max_iter=100,solver='saga',C=2)
+
+Accuracy: 0.966325036603
+F1-score: [ 0.97418631  0.95157895]
+
+
+
+
+
+Gaussian naive bayes
+
+Prior probabilities of the classes. If specified the priors are not adjusted according to the data. Since we need it to be adjusted as per the data, no parameters are chosen.
+
+Accuracy: 0.96046852123
+F1-score: [ 0.96914286  0.94501018]
+
+
+
+
+
+Bagging
+
+bagging = BaggingClassifier(base_estimator=decisionTree,n_estimators=5,bootstrap=True)
+
+Accuracy: 0.959004392387
+F1-score: [ 0.96839729  0.94166667]
+
+bagging = BaggingClassifier(base_estimator=neuralNet,n_estimators=20,bootstrap=True)
+
+Accuracy: 0.96925329429
+F1-score: [ 0.97627119  0.95634096]
+
+bagging = BaggingClassifier(base_estimator=neuralNet,n_estimators=10,bootstrap=True)
+Accuracy: 0.970717423133
+F1-score: [ 0.97737557  0.95850622]
+
+bagging = BaggingClassifier(base_estimator=neuralNet,n_estimators=5,bootstrap=True)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97727273  0.95884774]
+
+bagging = BaggingClassifier(base_estimator=SVM,n_estimators=10,bootstrap=True)
+
+Accuracy: 0.963396778917
+F1-score: [ 0.97168743  0.94824017]
+
+bagging = BaggingClassifier(base_estimator=SVM,n_estimators=5,bootstrap=True)
+
+Accuracy: 0.961932650073
+F1-score: [ 0.97045455  0.94650206]
+
+bagging = BaggingClassifier(base_estimator=perceptron,n_estimators=10,bootstrap=True)
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97303371  0.94957983]
+
+
+
+
+
+ADA boost
+
+adaBoost = AdaBoostClassifier(base_estimator=decisionTree,n_estimators=100,learning_rate=0.001,algorithm='SAMME.R')
+
+Accuracy: 0.93850658858
+F1-score: [ 0.9529148   0.91139241]
+
+adaBoost = AdaBoostClassifier(base_estimator=decisionTree,n_estimators=50,learning_rate=0.001,algorithm='SAMME.R')
+
+Accuracy: 0.945827232796
+F1-score: [ 0.95828636  0.92275574]
+
+adaBoost = AdaBoostClassifier(base_estimator=decisionTree,n_estimators=60,learning_rate=0.001,algorithm='SAMME.R')
+
+Accuracy: 0.953147877013
+F1-score: [ 0.96412556  0.93248945]
+
+adaBoost = AdaBoostClassifier(base_estimator=decisionTree,n_estimators=80,learning_rate=0.001,algorithm='SAMME.R')
+
+Accuracy: 0.961932650073
+F1-score: [ 0.97065463  0.94583333]
+
+adaBoost = AdaBoostClassifier(base_estimator=SVM,n_estimators=80,learning_rate=0.001,algorithm='SAMME')
+
+Accuracy: 0.96925329429
+F1-score: [ 0.97621744  0.95652174]
+
+adaBoost = AdaBoostClassifier(base_estimator=kNN,n_estimators=80,learning_rate=0.001,algorithm='SAMME')
+
+KNeighborsClassifier doesn't support sample_weight.
+
+adaBoost = AdaBoostClassifier(base_estimator=neuralNet,n_estimators=80,learning_rate=0.001,algorithm='SAMME')
+
+MLPClassifier doesn't support sample_weight.
+
+
+
+
+
+Random forest
+
+randomForest = RandomForestClassifier(n_estimators=100,criterion='entropy',max_features='auto')
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97742664  0.95833333]
+
+randomForest = RandomForestClassifier(n_estimators=100,criterion='gini',max_features='auto')
+
+Accuracy: 0.972181551977
+F1-score: [ 0.97848245  0.96066253]
+
+randomForest = RandomForestClassifier(n_estimators=100,criterion='gini',max_features='log2')
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97737557  0.95850622]
+
+randomForest = RandomForestClassifier(n_estimators=50,criterion='gini',max_features='auto')
+
+Accuracy: 0.97364568082
+F1-score: [ 0.97963801  0.9626556 ]
+
+randomForest = RandomForestClassifier(n_estimators=20,criterion='gini',max_features='auto')
+
+Accuracy: 0.959004392387
+F1-score: [ 0.96846847  0.94142259]
+
+randomForest = RandomForestClassifier(n_estimators=80,criterion='gini',max_features='auto')
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97742664  0.95833333]
+
+
+
+
+
+Gradient boosting
+
+gradientBoost = GradientBoostingClassifier(loss= 'deviance', learning_rate=0.05, n_estimators=100, presort='auto')
+
+Accuracy: 0.963396778917
+F1-score: [ 0.97187852  0.9475891 ]
+
+gradientBoost = GradientBoostingClassifier(loss= 'deviance', learning_rate=0.01, n_estimators=100, presort='auto')
+
+Accuracy: 0.948755490483
+F1-score: [ 0.96089385  0.92569002]
+
+gradientBoost = GradientBoostingClassifier(loss= 'deviance', learning_rate=0.05, n_estimators=50, presort='auto')
+
+Accuracy: 0.959004392387
+F1-score: [ 0.96846847  0.94142259]
+
+gradientBoost = GradientBoostingClassifier(loss= 'deviance', learning_rate=0.05, n_estimators=80, presort='auto')
+
+Accuracy: 0.9560761347
+F1-score: [ 0.96621622  0.93723849]
+
+gradientBoost = GradientBoostingClassifier(loss= 'exponential', learning_rate=0.05, n_estimators=80, presort='auto')
+
+Accuracy: 0.96046852123
+F1-score: [ 0.96969697  0.94315789]
+
+gradientBoost = GradientBoostingClassifier(loss= 'exponential', learning_rate=0.05, n_estimators=100, presort='auto')
+
+Accuracy: 0.959004392387
+F1-score: [ 0.96860987  0.94092827]
+
+
+
+
+Deep Learning
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=50,learning_rate_init=0.001)
+
+Accuracy: 0.972181551977
+F1-score: [ 0.97833523  0.96114519]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='relu',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=50,learning_rate_init=0.001)
+
+Accuracy: 0.783308931186
+F1-score: [ 0.85546875  0.56725146]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.05,learning_rate='adaptive',max_iter=50,learning_rate_init=0.001)
+
+Accuracy: 0.967789165447
+F1-score: [ 0.97488584  0.95510204]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=100,learning_rate_init=0.001)
+
+Accuracy: 0.966325036603
+F1-score: [ 0.97371429  0.95315682]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=80,learning_rate_init=0.001)
+
+Accuracy: 0.972181551977
+F1-score: [ 0.97833523  0.96114519]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(20,16,14,10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=60,learning_rate_init=0.001)
+
+Accuracy: 0.975109809663
+F1-score: [ 0.98052692  0.96551724]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(10,8,7,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=60,learning_rate_init=0.001)
+
+Accuracy: 0.96486090776
+F1-score: [ 0.97272727  0.95061728]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(10,9,8,7,6,5,4,2),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=60,learning_rate_init=0.001)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97716895  0.95918367]
+
+deepLearning = MLPClassifier(hidden_layer_sizes=(12,10,10,8,8,5,3,3,2,1),activation='tanh',solver='lbfgs',alpha=0.005,learning_rate='adaptive',max_iter=60,learning_rate_init=0.001)
+
+Accuracy: 0.970717423133
+F1-score: [ 0.97727273  0.95884774]
+
